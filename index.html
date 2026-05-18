@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HGA Multiservi — Miami's premier exterior cleaning company. Luxury results for homes and businesses across Miami-Dade." />
+  <title>HGA Multiservi — Miami Premium Exterior Cleaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── NAV (hidden on hero, fades in after scroll) ────── -->
+  <nav id="nav" class="nav-hidden">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">HGA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#content">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#quote">Quote</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+13054988610" class="nav-phone">(305) 498-8610</a>
+        <a href="#quote" class="nav-cta">Get Quote</a>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile hidden" id="mobileMenu">
+      <a href="#content" class="mob-link">About</a>
+      <a href="#services" class="mob-link">Services</a>
+      <a href="#quote" class="mob-link">Quote</a>
+      <a href="tel:+13054988610" class="mob-link">(305) 498-8610</a>
+      <a href="#quote" class="mob-cta">Get Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 1 — CINEMATIC LOGO HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-screen">
+
+    <!-- Three.js canvas (particles + water plane) -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- Ambient glow orbs -->
+    <div class="amb-glow-1" aria-hidden="true"></div>
+    <div class="amb-glow-2" aria-hidden="true"></div>
+    <div class="amb-glow-3" aria-hidden="true"></div>
+
+    <!-- Central logo stage -->
+    <div class="logo-stage" id="logoStage">
+
+      <!-- Water rings -->
+      <div class="ring ring-a" aria-hidden="true"></div>
+      <div class="ring ring-b" aria-hidden="true"></div>
+      <div class="ring ring-c" aria-hidden="true"></div>
+
+      <!-- Logo -->
+      <div class="logo-wrap" id="logoWrap">
+        <img
+          src="29EC1B04-5280-44A8-ADD4-6D3526DAC722.PNG"
+          alt="HGA Multiservi"
+          class="hero-logo"
+          id="heroLogo"
+        />
+      </div>
+
+      <!-- Water surface reflection -->
+      <div class="water-surface" aria-hidden="true">
+        <img
+          src="29EC1B04-5280-44A8-ADD4-6D3526DAC722.PNG"
+          class="logo-reflection"
+          alt=""
+        />
+        <div class="water-shimmer"></div>
+        <div class="water-caustics"></div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-discover" id="scrollDiscover">
+      <span class="sd-text">Scroll to Discover</span>
+      <div class="sd-track"><div class="sd-dot"></div></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 2 — MAIN CONTENT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="content" class="content-screen">
+    <div class="content-inner container">
+
+      <div class="content-badge" id="badge">
+        <span>Miami</span>
+        <span class="badge-dot">·</span>
+        <span>Premium Exterior Care</span>
+      </div>
+
+      <h1 class="content-title" id="contentTitle">
+        Miami Premium<br />
+        <span class="gradient-text">Exterior Cleaning</span>
+      </h1>
+
+      <p class="content-sub" id="contentSub">
+        The highest standard in exterior care — trusted by Miami-Dade's finest
+        homes and businesses. Precision results, every time, guaranteed.
+      </p>
+
+      <div class="content-ctas" id="contentCtas">
+        <a href="#quote" class="btn-glow">Get Free Quote</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+
+      <div class="trust-bar" id="trustBar">
+        <div class="trust-item">
+          <span class="trust-num" data-target="500">0</span>
+          <span class="trust-label">Projects</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-num" data-target="5" data-suffix="★">0</span>
+          <span class="trust-label">Rating</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-static">100%</span>
+          <span class="trust-label">Licensed &amp; Insured</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 3 — SERVICES
+  ══════════════════════════════════════════════════════════ -->
+  <section id="services" class="services-screen">
+    <div class="container">
+
+      <div class="svc-header">
+        <span class="eyebrow">What We Do</span>
+        <h2>Every surface.<br /><em>Perfectly clean.</em></h2>
+        <p>Professional-grade equipment. Eco-friendly solutions. Immaculate results.</p>
+      </div>
+
+      <div class="svc-grid">
+
+        <!-- House Washing -->
+        <div class="svc-card">
+          <div class="svc-img svc-house">
+            <div class="svc-img-glow"></div>
+            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+              <path d="M8 20L24 6L40 20V42H30V30H18V42H8V20Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M18 30H30V42H18V30Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <h3>House Washing</h3>
+            <p>Complete exterior cleaning that removes mildew, algae, and years of buildup — safely and effectively.</p>
+            <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Roof Cleaning -->
+        <div class="svc-card">
+          <div class="svc-img svc-roof">
+            <div class="svc-img-glow"></div>
+            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+              <path d="M4 24L24 4L44 24" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 24V42H38V24" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="24" cy="26" r="4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <h3>Roof Cleaning</h3>
+            <p>Soft wash removes black streaks, algae, and moss without pressure damage to your shingles or tiles.</p>
+            <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Driveway Cleaning -->
+        <div class="svc-card">
+          <div class="svc-img svc-drive">
+            <div class="svc-img-glow"></div>
+            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="14" width="36" height="24" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 22H42M6 30H42" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="14" cy="38" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="34" cy="38" r="4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <h3>Driveway Cleaning</h3>
+            <p>High-pressure restoration removes oil stains, tire marks, and mold from concrete and paver surfaces.</p>
+            <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Commercial Cleaning -->
+        <div class="svc-card">
+          <div class="svc-img svc-comm">
+            <div class="svc-img-glow"></div>
+            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="8" width="32" height="34" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 8V42M32 8V42M8 20H40M8 32H40" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="20" y="34" width="8" height="8" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="svc-body">
+            <h3>Commercial Cleaning</h3>
+            <p>Full-scale pressure washing for storefronts, parking structures, and commercial complexes of any size.</p>
+            <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCREEN 4 — FINAL CTA + QUOTE FORM
+  ══════════════════════════════════════════════════════════ -->
+  <section id="quote" class="cta-screen">
+    <div class="cta-glow-bg" aria-hidden="true"></div>
+    <div class="container cta-layout">
+
+      <!-- Left: copy -->
+      <div class="cta-copy">
+        <span class="eyebrow">Free Estimate</span>
+        <h2>Get Your<br /><span class="gradient-text">Free Quote</span></h2>
+        <p>No commitment. No hidden fees. Just an honest price for exceptional results across Miami-Dade.</p>
+        <div class="cta-contact">
+          <a href="tel:+13054988610" class="cta-phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            (305) 498-8610
+          </a>
+          <a href="https://wa.me/13054988610" target="_blank" class="cta-wa">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <form id="quoteForm" class="quote-form" novalidate>
+
+        <!-- Web3Forms config -->
+        <input type="hidden" name="access_key" value="cae3309e-c4f5-4e30-9d63-7a085e6898a8" />
+        <input type="hidden" name="subject"    value="New Quote Request — HGA Multiservi" />
+        <input type="hidden" name="from_name"  value="HGA Website" />
+        <!-- Honeypot anti-spam (must stay empty) -->
+        <input type="checkbox" name="botcheck" id="botcheck"
+               style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="form-row">
+          <div class="ff">
+            <input type="text"  id="fName"  name="Full Name"    placeholder=" " required autocomplete="name" />
+            <label for="fName">Full Name <span class="req-star">*</span></label>
+            <span class="field-err" id="errName"></span>
+          </div>
+          <div class="ff">
+            <input type="tel"   id="fPhone" name="Phone Number" placeholder=" " required autocomplete="tel" />
+            <label for="fPhone">Phone Number <span class="req-star">*</span></label>
+            <span class="field-err" id="errPhone"></span>
+          </div>
+        </div>
+
+        <div class="ff">
+          <input type="email" id="fEmail" name="Email" placeholder=" " required autocomplete="email" />
+          <label for="fEmail">Email Address <span class="req-star">*</span></label>
+          <span class="field-err" id="errEmail"></span>
+        </div>
+
+        <div class="ff">
+          <input type="text" id="fAddress" name="Address" placeholder=" " required autocomplete="street-address" />
+          <label for="fAddress">Property Address <span class="req-star">*</span></label>
+          <span class="field-err" id="errAddress"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="ff">
+            <select id="fService" name="Service Type" required>
+              <option value="" disabled selected></option>
+              <option>House Washing</option>
+              <option>Roof Cleaning</option>
+              <option>Driveway Cleaning</option>
+              <option>Commercial Cleaning</option>
+              <option>Window Cleaning</option>
+              <option>Solar Panel Cleaning</option>
+              <option>Sidewalk Cleaning</option>
+              <option>Trash Bin Cleaning</option>
+            </select>
+            <label for="fService" class="sl">Service Type <span class="req-star">*</span></label>
+            <span class="field-err" id="errService"></span>
+          </div>
+          <div class="ff">
+            <input type="text" id="fSize" name="Property Size" placeholder=" " />
+            <label for="fSize">Property Size (sq ft)</label>
+          </div>
+        </div>
+
+        <div class="ff">
+          <textarea id="fMsg" name="Message" placeholder=" " rows="3"></textarea>
+          <label for="fMsg">Additional Details</label>
+        </div>
+
+        <p class="form-global-err hidden" id="fErr"></p>
+
+        <button type="submit" class="btn-glow btn-full" id="submitBtn">
+          <span id="btnText">Get My Free Quote</span>
+          <span id="btnSpinner" class="btn-spinner hidden" aria-hidden="true"></span>
+          <svg id="btnArrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+        <p class="form-note">Responds within 2 hours · No commitment required</p>
+      </form>
+
+      <!-- Success state -->
+      <div class="form-success hidden" id="formSuccess">
+        <div class="success-check">✓</div>
+        <h3>Message Sent!</h3>
+        <p>We received your request and will reach out within 2 hours via phone or WhatsApp to confirm your free estimate.</p>
+        <a href="tel:+13054988610" class="btn-glow">Call to Confirm</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">HGA<span>.</span></span>
+        <p>Miami-Dade's premier exterior cleaning company. Residential &amp; commercial. Licensed, insured, 5-star rated.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">House Washing</a></li>
+          <li><a href="#services">Roof Cleaning</a></li>
+          <li><a href="#services">Driveway Cleaning</a></li>
+          <li><a href="#services">Commercial</a></li>
+          <li><a href="#services">Windows &amp; Solar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li>Miami</li><li>Hialeah</li><li>Doral</li>
+          <li>Coral Gables</li><li>Brickell</li>
+          <li>Kendall</li><li>Miami Lakes</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13054988610">(305) 498-8610</a></li>
+          <li><a href="https://wa.me/13054988610">WhatsApp</a></li>
+          <li><a href="mailto:info@hgamultiservi.com">Email</a></li>
+          <li>Miami-Dade County, FL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 HGA Multiservi · Miami-Dade, FL · All rights reserved.</p>
+      <p>Licensed · Insured · 5-Star Rated</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/13054988610" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

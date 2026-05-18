@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /usr /opt /Applications -name \"node\" -type f 2>/dev/null | head -5; find ~ -name \"node\" -type f 2>/dev/null | head -5)",
+      "Read(//usr/**)",
+      "Read(//Users/henrygonzalez/**)"
+    ]
+  }
+}
