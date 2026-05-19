@@ -521,6 +521,14 @@ h2 em { font-style: italic; color: var(--blue-l); }
   color: var(--white);
   line-height: 1;
 }
+.metric-static-lg.metric-text {
+  font-size: clamp(20px, 2.4vw, 28px);
+  letter-spacing: -0.02em;
+  background: linear-gradient(100deg, var(--blue-l) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .metric-label {
   font-size: 12px;
