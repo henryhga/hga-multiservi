@@ -12,14 +12,16 @@
 </head>
 <body>
 
-  <!-- ── NAV (hidden on hero, fades in after scroll) ────── -->
+  <!-- ── NAV ────────────────────────────────────────────── -->
   <nav id="nav" class="nav-hidden">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">HGA<span>.</span></a>
       <ul class="nav-links">
-        <li><a href="#content">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#quote">Quote</a></li>
+        <li><a href="#services">Work</a></li>
+        <li><a href="#quote">Process</a></li>
+        <li><a href="#content">About</a></li>
+        <li><a href="#quote">Contact</a></li>
       </ul>
       <div class="nav-right">
         <a href="tel:+13054988610" class="nav-phone">(305) 498-8610</a>
@@ -30,9 +32,11 @@
       </div>
     </div>
     <div class="nav-mobile hidden" id="mobileMenu">
-      <a href="#content" class="mob-link">About</a>
       <a href="#services" class="mob-link">Services</a>
-      <a href="#quote" class="mob-link">Quote</a>
+      <a href="#services" class="mob-link">Work</a>
+      <a href="#quote"    class="mob-link">Process</a>
+      <a href="#content"  class="mob-link">About</a>
+      <a href="#quote"    class="mob-link">Contact</a>
       <a href="tel:+13054988610" class="mob-link">(305) 498-8610</a>
       <a href="#quote" class="mob-cta">Get Free Quote</a>
     </div>
@@ -43,23 +47,18 @@
   ══════════════════════════════════════════════════════════ -->
   <section id="hero" class="hero-screen">
 
-    <!-- Three.js canvas (particles + water plane) -->
     <canvas id="hero-canvas"></canvas>
 
-    <!-- Ambient glow orbs -->
     <div class="amb-glow-1" aria-hidden="true"></div>
     <div class="amb-glow-2" aria-hidden="true"></div>
     <div class="amb-glow-3" aria-hidden="true"></div>
 
-    <!-- Central logo stage -->
     <div class="logo-stage" id="logoStage">
 
-      <!-- Water rings -->
       <div class="ring ring-a" aria-hidden="true"></div>
       <div class="ring ring-b" aria-hidden="true"></div>
       <div class="ring ring-c" aria-hidden="true"></div>
 
-      <!-- Logo -->
       <div class="logo-wrap" id="logoWrap">
         <img
           src="29EC1B04-5280-44A8-ADD4-6D3526DAC722.PNG"
@@ -69,7 +68,6 @@
         />
       </div>
 
-      <!-- Water surface reflection -->
       <div class="water-surface" aria-hidden="true">
         <img
           src="29EC1B04-5280-44A8-ADD4-6D3526DAC722.PNG"
@@ -82,7 +80,6 @@
 
     </div>
 
-    <!-- Scroll indicator -->
     <div class="scroll-discover" id="scrollDiscover">
       <span class="sd-text">Scroll to Discover</span>
       <div class="sd-track"><div class="sd-dot"></div></div>
@@ -109,7 +106,7 @@
 
       <p class="content-sub" id="contentSub">
         The highest standard in exterior care — trusted by Miami-Dade's finest
-        homes and businesses. Precision results, every time, guaranteed.
+        homes and businesses. Results that speak for themselves.
       </p>
 
       <div class="content-ctas" id="contentCtas">
@@ -119,21 +116,74 @@
 
       <div class="trust-bar" id="trustBar">
         <div class="trust-item">
-          <span class="trust-num" data-target="500">0</span>
+          <div class="trust-stars" aria-label="5 stars">★★★★★</div>
+          <span class="trust-num" data-target="5" data-suffix=".0">0</span>
+          <span class="trust-label">Google Rating</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-num" data-target="50" data-suffix="+">0</span>
           <span class="trust-label">Projects</span>
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-item">
-          <span class="trust-num" data-target="5" data-suffix="★">0</span>
-          <span class="trust-label">Rating</span>
-        </div>
-        <div class="trust-sep" aria-hidden="true"></div>
-        <div class="trust-item">
-          <span class="trust-static">100%</span>
-          <span class="trust-label">Licensed &amp; Insured</span>
+          <span class="trust-static">Licensed &amp; Insured</span>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       METRICS STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <section class="metrics-strip">
+    <div class="container">
+      <div class="metrics-grid">
+
+        <div class="metric-item">
+          <div class="metric-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <span class="metric-num trust-num" data-target="50" data-suffix="+">0</span>
+          <span class="metric-label">Projects Completed</span>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <span class="metric-num trust-num" data-target="5" data-suffix=".0">0</span>
+          <span class="metric-label">Google Rating</span>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <span class="metric-static-lg">100%</span>
+          <span class="metric-label">Satisfaction</span>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <span class="metric-num trust-num" data-target="10" data-suffix="+">0</span>
+          <span class="metric-label">Years of Experience</span>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -153,25 +203,27 @@
 
         <!-- House Washing -->
         <div class="svc-card">
-          <div class="svc-img svc-house">
-            <div class="svc-img-glow"></div>
-            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+          <div class="svc-photo svc-house">
+            <div class="svc-photo-glow"></div>
+            <div class="svc-photo-overlay"></div>
+            <svg class="svc-icon" viewBox="0 0 48 48" fill="none">
               <path d="M8 20L24 6L40 20V42H30V30H18V42H8V20Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
               <path d="M18 30H30V42H18V30Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="svc-body">
             <h3>House Washing</h3>
-            <p>Complete exterior cleaning that removes mildew, algae, and years of buildup — safely and effectively.</p>
+            <p>Safe &amp; effective soft washing for your entire home.</p>
             <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
           </div>
         </div>
 
         <!-- Roof Cleaning -->
         <div class="svc-card">
-          <div class="svc-img svc-roof">
-            <div class="svc-img-glow"></div>
-            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+          <div class="svc-photo svc-roof">
+            <div class="svc-photo-glow"></div>
+            <div class="svc-photo-overlay"></div>
+            <svg class="svc-icon" viewBox="0 0 48 48" fill="none">
               <path d="M4 24L24 4L44 24" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
               <path d="M10 24V42H38V24" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
               <circle cx="24" cy="26" r="4" stroke="currentColor" stroke-width="1.5"/>
@@ -179,16 +231,17 @@
           </div>
           <div class="svc-body">
             <h3>Roof Cleaning</h3>
-            <p>Soft wash removes black streaks, algae, and moss without pressure damage to your shingles or tiles.</p>
+            <p>Extend the life of your roof and boost curb appeal.</p>
             <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
           </div>
         </div>
 
         <!-- Driveway Cleaning -->
         <div class="svc-card">
-          <div class="svc-img svc-drive">
-            <div class="svc-img-glow"></div>
-            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+          <div class="svc-photo svc-drive">
+            <div class="svc-photo-glow"></div>
+            <div class="svc-photo-overlay"></div>
+            <svg class="svc-icon" viewBox="0 0 48 48" fill="none">
               <rect x="6" y="14" width="36" height="24" rx="3" stroke="currentColor" stroke-width="1.5"/>
               <path d="M6 22H42M6 30H42" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="14" cy="38" r="4" stroke="currentColor" stroke-width="1.5"/>
@@ -197,16 +250,17 @@
           </div>
           <div class="svc-body">
             <h3>Driveway Cleaning</h3>
-            <p>High-pressure restoration removes oil stains, tire marks, and mold from concrete and paver surfaces.</p>
+            <p>Remove stains, oil, and grime. Restore like new.</p>
             <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
           </div>
         </div>
 
         <!-- Commercial Cleaning -->
         <div class="svc-card">
-          <div class="svc-img svc-comm">
-            <div class="svc-img-glow"></div>
-            <svg class="svc-svg" viewBox="0 0 48 48" fill="none">
+          <div class="svc-photo svc-comm">
+            <div class="svc-photo-glow"></div>
+            <div class="svc-photo-overlay"></div>
+            <svg class="svc-icon" viewBox="0 0 48 48" fill="none">
               <rect x="8" y="8" width="32" height="34" rx="2" stroke="currentColor" stroke-width="1.5"/>
               <path d="M16 8V42M32 8V42M8 20H40M8 32H40" stroke="currentColor" stroke-width="1.5"/>
               <rect x="20" y="34" width="8" height="8" stroke="currentColor" stroke-width="1.5"/>
@@ -214,12 +268,31 @@
           </div>
           <div class="svc-body">
             <h3>Commercial Cleaning</h3>
-            <p>Full-scale pressure washing for storefronts, parking structures, and commercial complexes of any size.</p>
+            <p>Professional exterior cleaning for your business.</p>
             <a href="#quote" class="svc-cta">Request Service <span>→</span></a>
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       READY CTA STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <section class="ready-section">
+    <div class="container ready-inner">
+      <div class="ready-text">
+        <h3>Ready for a cleaner property?</h3>
+        <p>Get a fast, free quote today and see the HGA difference.</p>
+      </div>
+      <a href="#quote" class="btn-glow ready-btn">
+        Get Your Free Quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -250,11 +323,9 @@
       <!-- Right: form -->
       <form id="quoteForm" class="quote-form" novalidate>
 
-        <!-- Web3Forms config -->
         <input type="hidden" name="access_key" value="cae3309e-c4f5-4e30-9d63-7a085e6898a8" />
         <input type="hidden" name="subject"    value="New Quote Request — HGA Multiservi" />
         <input type="hidden" name="from_name"  value="HGA Website" />
-        <!-- Honeypot anti-spam (must stay empty) -->
         <input type="checkbox" name="botcheck" id="botcheck"
                style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 

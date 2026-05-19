@@ -184,10 +184,22 @@
     );
   });
 
+  /* ── METRICS STRIP ── */
+  gsap.from('.metric-item', {
+    opacity: 0, y: 36, duration: 0.75, ease: 'power2.out', stagger: 0.1,
+    scrollTrigger: { trigger: '.metrics-grid', start: 'top 80%' },
+  });
+
   /* ── SERVICE CARDS ── */
   gsap.from('.svc-card', {
-    opacity: 0, y: 50, duration: 0.8, ease: 'power2.out', stagger: 0.12,
+    opacity: 0, y: 50, duration: 0.8, ease: 'power2.out', stagger: 0.1,
     scrollTrigger: { trigger: '.svc-grid', start: 'top 80%' },
+  });
+
+  /* ── READY SECTION ── */
+  gsap.from('.ready-text, .ready-btn', {
+    opacity: 0, y: 24, duration: 0.7, ease: 'power2.out', stagger: 0.12,
+    scrollTrigger: { trigger: '.ready-section', start: 'top 80%' },
   });
 
   /* ── CTA SECTION ── */
