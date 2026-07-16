@@ -1,0 +1,14 @@
+.wrap {
+  background: var(--color-background);
+}
+
+.heading {
+  font-size: clamp(24px, 3.6vw, 34px);
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 15px;
+  max-width: 560px;
+}

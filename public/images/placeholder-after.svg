@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t2 d2">
+  <title id="t2">After photo placeholder</title>
+  <desc id="d2">Placeholder graphic — replace with a real "after" project photo.</desc>
+  <rect width="400" height="300" fill="#eaf2ff"/>
+  <path d="M0 0 400 300M400 0 0 300" stroke="#cfe0fb" stroke-width="1"/>
+  <path d="M120 210v-70l80-55 80 55v70" fill="none" stroke="#2582f5" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="150" y="180" width="30" height="30" fill="#2582f5"/>
+  <text x="200" y="255" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1a63c4">AFTER — placeholder photo</text>
+</svg>

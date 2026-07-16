@@ -1,0 +1,115 @@
+.hero {
+  background: var(--color-navy);
+  padding: 72px 0 64px;
+  text-align: center;
+}
+
+.heroTitle {
+  color: var(--color-white);
+  font-size: clamp(28px, 4.4vw, 44px);
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+.heroSubtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto 26px;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.heroClaims {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricingNote {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-top: 24px;
+}
+
+.howSection {
+  background: var(--color-background);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.step {
+  text-align: center;
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.step h3 {
+  font-size: 15px;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+}
+
+.step p {
+  font-size: 13.5px;
+  margin: 0;
+}
+
+.faqSection {
+  background: var(--color-background);
+}
+
+.faqWrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .plansGrid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

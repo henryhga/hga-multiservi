@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dark .pill {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  backdrop-filter: blur(6px);
+}
+
+.light .pill {
+  background: rgba(37, 130, 245, 0.09);
+  color: var(--color-primary-dark);
+}

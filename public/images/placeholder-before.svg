@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Before photo placeholder</title>
+  <desc id="d1">Placeholder graphic — replace with a real "before" project photo.</desc>
+  <rect width="400" height="300" fill="#dfe6f0"/>
+  <path d="M0 0 400 300M400 0 0 300" stroke="#c3cee0" stroke-width="1"/>
+  <path d="M120 210v-70l80-55 80 55v70" fill="none" stroke="#8a97ad" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="150" y="180" width="30" height="30" fill="#8a97ad"/>
+  <text x="200" y="255" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5c6b85">BEFORE — placeholder photo</text>
+</svg>

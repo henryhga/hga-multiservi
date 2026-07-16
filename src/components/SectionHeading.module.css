@@ -1,0 +1,35 @@
+.wrap {
+  max-width: 640px;
+  margin-bottom: 44px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(26px, 4vw, 36px);
+  color: var(--color-navy);
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 16px;
+  color: var(--color-muted);
+}

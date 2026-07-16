@@ -1,0 +1,182 @@
+.hero {
+  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-white) 100%);
+  padding: 64px 0 56px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: clamp(28px, 4.4vw, 44px);
+  color: var(--color-navy);
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  max-width: 480px;
+  margin-bottom: 26px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.heroArt {
+  aspect-ratio: 1;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.trustBar {
+  background: var(--color-navy);
+  padding: 18px 0;
+}
+
+.trustInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+}
+
+.trustItem {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding-left: 18px;
+}
+
+.trustItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+}
+
+.servicesQuoteGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.quotePanel {
+  background: var(--color-navy);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.quoteTitle {
+  color: var(--color-white);
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.howSection {
+  background: var(--color-background);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  counter-reset: step;
+}
+
+.step {
+  text-align: center;
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.step h3 {
+  font-size: 15px;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+}
+
+.step p {
+  font-size: 13.5px;
+  margin: 0;
+}
+
+.compareWrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.placeholderNote {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--color-muted);
+  margin-top: 12px;
+}
+
+.areasSection {
+  background: var(--color-background);
+  text-align: center;
+}
+
+.faqWrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroArt {
+    max-width: 240px;
+  }
+  .servicesQuoteGrid {
+    grid-template-columns: 1fr;
+  }
+  .quotePanel {
+    position: static;
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
