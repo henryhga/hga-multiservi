@@ -55,3 +55,10 @@ the domain back on the old site without touching git:
   a rollback.
 - The legacy static site (HTML/CSS/JS) is preserved in
   `legacy-static-site/` in this repo for reference even after rollback.
+- **Vercel project setting change (not in this repo):** the `hga-multiservi`
+  Vercel project's Framework Preset was explicitly set to **Next.js**
+  (Project → Settings → General → Framework Preset). It was previously
+  unset/auto, which caused Vercel to silently fall back to the generic
+  `@vercel/static-build` builder and 404 on every route. If the old static
+  site is ever redeployed to this same Vercel project, change the Framework
+  Preset back to **Other** first, or it may fail to build/serve correctly.
