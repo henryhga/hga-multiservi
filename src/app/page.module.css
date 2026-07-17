@@ -15,7 +15,7 @@
 .heroSky {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #dff0fc 0%, #a9d7f5 22%, #6cb3e8 58%, #3f8fd6 100%);
+  background: linear-gradient(180deg, #c3e3fa 0%, #8ec6ef 22%, #5aa8e0 55%, #3f8fd6 100%);
 }
 
 .heroGlow {
