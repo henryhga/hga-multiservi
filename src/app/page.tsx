@@ -24,26 +24,16 @@ export default function HomePage() {
     <>
       <section className={styles.hero} aria-labelledby="hero-heading">
         <div className={styles.heroBg} aria-hidden="true">
-          <div className={styles.heroSky} />
-          <span className={`${styles.cloud} ${styles.cloud1}`} />
-          <span className={`${styles.cloud} ${styles.cloud2}`} />
-          <span className={`${styles.cloud} ${styles.cloud3}`} />
-          <span className={`${styles.cloud} ${styles.cloud4}`} />
-
-          <div className={styles.heroScene}>
-            <Image
-              src="/images/home-hero-scene.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 760px) 70vw, 55vw"
-              style={{ objectFit: "cover", objectPosition: "left center" }}
-              priority
-            />
-          </div>
-
+          <Image
+            src="/images/home-skyline-scene.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "center 40%" }}
+            priority
+          />
           <div className={styles.heroHaze} />
           <div className={styles.heroGlow} />
-          <div className={styles.heroWater} />
         </div>
 
         <div className={`container ${styles.heroInner}`}>
