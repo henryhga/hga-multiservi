@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
@@ -86,47 +87,16 @@ export default async function ExteriorCleaningPage() {
           <span className={`${styles.cloud} ${styles.cloud1}`} />
           <span className={`${styles.cloud} ${styles.cloud2}`} />
 
-          <svg className={styles.skyline} viewBox="0 0 420 260" preserveAspectRatio="xMaxYMax meet">
-            <rect x="10" y="140" width="34" height="120" fill="currentColor" />
-            <rect x="50" y="100" width="26" height="160" fill="currentColor" />
-            <rect x="82" y="150" width="30" height="110" fill="currentColor" />
-            <rect x="118" y="60" width="22" height="200" fill="currentColor" />
-            <rect x="146" y="120" width="34" height="140" fill="currentColor" />
-            <rect x="186" y="90" width="24" height="170" fill="currentColor" />
-            <rect x="216" y="150" width="28" height="110" fill="currentColor" />
-          </svg>
-
-          <svg className={styles.houseScene} viewBox="0 0 480 320">
-            <ellipse cx="330" cy="290" rx="220" ry="20" fill="rgba(10,40,80,0.08)" />
-            <g fill="#f4ece1" stroke="#c9b79a" strokeWidth="2">
-              <rect x="150" y="140" width="220" height="140" />
-              <path d="M130 150 L260 70 L390 150 Z" fill="#8a5a44" stroke="#6e4634" />
-            </g>
-            <rect x="330" y="90" width="26" height="40" fill="#8a5a44" />
-            <g fill="#bcd6ea" stroke="#7fa8c4" strokeWidth="2">
-              <rect x="180" y="180" width="40" height="50" />
-              <rect x="300" y="180" width="40" height="50" />
-            </g>
-            <rect x="235" y="200" width="50" height="80" fill="#6e4634" />
-            <g stroke="#2f5233" strokeWidth="7" fill="none" strokeLinecap="round">
-              <path d="M455 130 C440 110 420 95 395 88" />
-              <path d="M455 130 C450 100 445 75 452 48" />
-              <path d="M455 130 C468 105 480 85 480 60" />
-              <path d="M455 130 C475 118 478 100 470 78" />
-              <path d="M455 130 C430 128 410 138 398 155" />
-            </g>
-            <path d="M455 130 C450 190 452 250 448 300" stroke="#6e4634" strokeWidth="10" fill="none" strokeLinecap="round" />
-            <g>
-              <circle cx="415" cy="235" r="16" fill="#233a52" />
-              <rect x="405" y="248" width="20" height="34" fill="#233a52" />
-              <rect x="399" y="250" width="10" height="24" fill="#1a2c40" transform="rotate(-18 404 262)" />
-              <rect x="416" y="250" width="10" height="24" fill="#1a2c40" transform="rotate(18 421 262)" />
-              <rect x="403" y="280" width="9" height="20" fill="#16232f" />
-              <rect x="418" y="280" width="9" height="20" fill="#16232f" />
-              <path d="M395 264 C370 268 350 278 335 296" stroke="#9fb3c4" strokeWidth="3" fill="none" strokeLinecap="round" />
-              <path d="M335 296 C325 300 316 306 310 314" stroke="#dff0fb" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.85" />
-            </g>
-          </svg>
+          <div className={styles.heroScene}>
+            <Image
+              src="/images/exterior-hero-scene.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 760px) 70vw, 55vw"
+              style={{ objectFit: "cover", objectPosition: "right center" }}
+              priority
+            />
+          </div>
 
           <div className={styles.heroWater} />
         </div>

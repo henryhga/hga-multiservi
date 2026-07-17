@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import BenefitCard from "@/components/BenefitCard";
 import ServiceAreaPills from "@/components/ServiceAreaPills";
 import ContactCTA from "@/components/ContactCTA";
-import HgaMark from "@/components/HgaMark";
 import { business } from "@/lib/config";
 import styles from "./page.module.css";
 
@@ -31,37 +31,29 @@ export default function HomePage() {
           <span className={`${styles.cloud} ${styles.cloud3}`} />
           <span className={`${styles.cloud} ${styles.cloud4}`} />
 
-          <svg className={styles.skyline} viewBox="0 0 420 260" preserveAspectRatio="xMaxYMax meet" aria-hidden="true">
-            <rect x="10" y="140" width="34" height="120" fill="currentColor" />
-            <rect x="50" y="100" width="26" height="160" fill="currentColor" />
-            <rect x="82" y="150" width="30" height="110" fill="currentColor" />
-            <rect x="118" y="60" width="22" height="200" fill="currentColor" />
-            <rect x="146" y="120" width="34" height="140" fill="currentColor" />
-            <rect x="186" y="90" width="24" height="170" fill="currentColor" />
-            <rect x="216" y="150" width="28" height="110" fill="currentColor" />
-            <rect x="250" y="30" width="16" height="230" fill="currentColor" />
-            <rect x="272" y="130" width="30" height="130" fill="currentColor" />
-            <rect x="308" y="170" width="26" height="90" fill="currentColor" />
-            <rect x="340" y="110" width="24" height="150" fill="currentColor" />
-            <rect x="370" y="160" width="30" height="100" fill="currentColor" />
-          </svg>
-
-          <svg className={styles.palm} viewBox="0 0 300 620" aria-hidden="true">
-            <path d="M182 620 C170 460 178 340 198 220" stroke="#5b4636" strokeWidth="16" fill="none" strokeLinecap="round" />
-            <g fill="#2f5233">
-              <path d="M198 220 C140 200 90 160 60 100 C110 120 160 150 198 220 Z" />
-              <path d="M198 220 C150 170 130 120 130 60 C170 100 195 150 198 220 Z" />
-              <path d="M198 220 C200 150 220 100 260 60 C250 120 230 170 198 220 Z" />
-              <path d="M198 220 C230 180 270 160 320 150 C290 190 250 210 198 220 Z" />
-              <path d="M198 220 C170 190 130 180 90 190 C120 210 155 222 198 220 Z" />
-            </g>
-          </svg>
+          <div className={styles.heroScene}>
+            <Image
+              src="/images/home-hero-scene.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 760px) 60vw, 40vw"
+              style={{ objectFit: "cover", objectPosition: "left center" }}
+              priority
+            />
+          </div>
 
           <div className={styles.heroWater} />
         </div>
 
         <div className={`container ${styles.heroInner}`}>
-          <HgaMark className={styles.heroLogoMark} />
+          <Image
+            src="/images/hga-logo-transparent.png"
+            alt="HGA Multiservi"
+            width={977}
+            height={411}
+            className={styles.heroLogoMark}
+            priority
+          />
           <h1 id="hero-heading" className={styles.heroTitle}>
             Professional Exterior Cleaning &amp; Trash Bin Cleaning Services
           </h1>

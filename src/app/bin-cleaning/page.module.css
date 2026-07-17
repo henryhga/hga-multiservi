@@ -39,22 +39,14 @@
   opacity: 0.8;
 }
 
-.skyline {
+.heroScene {
   position: absolute;
-  left: 38%;
-  bottom: 78px;
-  height: 58%;
-  width: auto;
-  color: rgba(60, 100, 145, 0.6);
-}
-
-.binScene {
-  position: absolute;
-  right: 2%;
-  bottom: 66px;
-  height: 78%;
-  width: auto;
-  filter: drop-shadow(0 12px 20px rgba(10, 40, 80, 0.18));
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 58%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 14%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 14%, #000 30%);
 }
 
 .heroWater {
@@ -165,12 +157,9 @@
 }
 
 @media (max-width: 960px) {
-  .binScene {
-    height: 50%;
-    opacity: 0.55;
-  }
-  .skyline {
-    left: 55%;
+  .heroScene {
+    width: 70%;
+    opacity: 0.7;
   }
   .plansGrid {
     grid-template-columns: 1fr;
@@ -186,8 +175,7 @@
   .steps {
     grid-template-columns: 1fr;
   }
-  .binScene,
-  .skyline {
+  .heroScene {
     display: none;
   }
   .hero {
