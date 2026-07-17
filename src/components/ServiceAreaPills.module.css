@@ -16,9 +16,9 @@
 }
 
 .dark .pill {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-primary);
   color: var(--color-white);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(10, 40, 80, 0.25);
 }
 
 .light .pill {
