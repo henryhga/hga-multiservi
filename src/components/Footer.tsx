@@ -8,6 +8,18 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <div className={`container ${styles.ctaRow}`}>
+        <div className={styles.ctaText}>
+          <span className={styles.ctaLabel}>Call or Text</span>
+          <a href={business.phoneHref} className={styles.ctaPhone}>
+            {business.phoneDisplay}
+          </a>
+        </div>
+        <a href={business.phoneHref} className={styles.ctaButton}>
+          Get a Free Quote Today!
+        </a>
+      </div>
+
       <div className={`container ${styles.grid}`}>
         <div className={styles.brand}>
           <Logo />
@@ -32,7 +44,14 @@ export default function Footer() {
         </div>
 
         <div className={styles.col}>
-          <h4>Service Areas</h4>
+          <h4>
+            <span className={styles.colIcon} aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2.5c3.2 4 5.4 7.1 5.4 10a5.4 5.4 0 1 1-10.8 0c0-2.9 2.2-6 5.4-10Z" fill="currentColor" />
+              </svg>
+            </span>
+            Service Areas
+          </h4>
           <ul>
             {business.serviceAreas.map((area) => (
               <li key={area}>{area}</li>
@@ -41,13 +60,20 @@ export default function Footer() {
         </div>
 
         <div className={styles.col}>
-          <h4>Contact</h4>
+          <h4>
+            <span className={styles.colIcon} aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3.1.7-.2 1L6.6 10.8Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            Phone
+          </h4>
           <ul>
             <li>
               <a href={business.phoneHref}>{business.phoneDisplay}</a>
-            </li>
-            <li>
-              <a href={`mailto:${business.email}`}>{business.email}</a>
             </li>
             <li>
               <a href={business.smsHref}>Call or Text {business.phoneDisplay}</a>
@@ -56,7 +82,21 @@ export default function Footer() {
         </div>
 
         <div className={styles.col}>
-          <h4>Legal</h4>
+          <h4>
+            <span className={styles.colIcon} aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path d="M3 5h18v14H3V5Z" stroke="currentColor" strokeWidth="1.8" />
+                <path d="m3 6 9 7 9-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            Email
+          </h4>
+          <ul>
+            <li>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
+            </li>
+          </ul>
+          <h4 className={styles.legalHeading}>Legal</h4>
           <ul>
             <li>
               <Link href="/privacy">Privacy Policy</Link>
@@ -78,9 +118,7 @@ export default function Footer() {
         <span>
           © {year} {business.name}. All Rights Reserved.
         </span>
-        <a href={business.phoneHref} className={styles.bottomCta}>
-          Get a Free Quote Today
-        </a>
+        <span className={styles.licensed}>Licensed &amp; Insured</span>
       </div>
     </footer>
   );

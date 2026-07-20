@@ -58,39 +58,59 @@ export default function HomePage() {
       <section className={`container ${styles.cardsSection}`} aria-label="Explore our services">
         <div className={styles.cardsGrid}>
           <Link href="/exterior-cleaning" className={styles.exploreCard}>
-            <span className={`${styles.exploreIcon} ${styles.exploreIconBlue}`} aria-hidden="true">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                <path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-            <h2 className={styles.exploreTitle}>HGA Exterior Cleaning Services</h2>
-            <p className={styles.exploreText}>
-              House washing, driveways, roofs, windows, solar panels and commercial properties.
-            </p>
-            <span className={styles.exploreCta}>
-              Explore Exterior Cleaning
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <Image
+              src="/images/home-hero-scene.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 880px) 100vw, 50vw"
+              className={styles.exploreImage}
+            />
+            <span className={styles.exploreOverlay} aria-hidden="true" />
+            <span className={styles.exploreContent}>
+              <span className={`${styles.exploreIcon} ${styles.exploreIconBlue}`} aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <h2 className={styles.exploreTitle}>HGA Exterior Cleaning Services</h2>
+              <p className={styles.exploreText}>
+                House washing, driveways, roofs, windows, solar panels and commercial properties.
+              </p>
+              <span className={styles.exploreCta}>
+                Explore Exterior Cleaning
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </span>
           </Link>
 
           <Link href="/bin-cleaning" className={styles.exploreCard}>
-            <span className={`${styles.exploreIcon} ${styles.exploreIconNavy}`} aria-hidden="true">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                <path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                <path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" strokeWidth="1.8" />
-              </svg>
-            </span>
-            <h2 className={styles.exploreTitle}>HGA Trash Bin Cleaning Services</h2>
-            <p className={styles.exploreText}>
-              Clean, sanitized and odor-free bins with flexible monthly, bi-monthly or one-time plans.
-            </p>
-            <span className={styles.exploreCta}>
-              View Bin Cleaning Plans
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <Image
+              src="/images/bin-hero-scene.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 880px) 100vw, 50vw"
+              className={styles.exploreImage}
+            />
+            <span className={styles.exploreOverlay} aria-hidden="true" />
+            <span className={styles.exploreContent}>
+              <span className={`${styles.exploreIcon} ${styles.exploreIconNavy}`} aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                  <path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" strokeWidth="1.8" />
+                </svg>
+              </span>
+              <h2 className={styles.exploreTitle}>HGA Trash Bin Cleaning Services</h2>
+              <p className={styles.exploreText}>
+                Clean, sanitized and odor-free bins with flexible monthly, bi-monthly or one-time plans.
+              </p>
+              <span className={styles.exploreCta}>
+                View Bin Cleaning Plans
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </span>
           </Link>
         </div>

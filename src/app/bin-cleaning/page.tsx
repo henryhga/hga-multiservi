@@ -45,22 +45,15 @@ export default async function BinCleaningPage() {
 
       <section className={styles.hero} aria-labelledby="bc-hero-heading">
         <div className={styles.heroBg} aria-hidden="true">
-          <div className={styles.heroSky} />
-          <span className={`${styles.cloud} ${styles.cloud1}`} />
-          <span className={`${styles.cloud} ${styles.cloud2}`} />
-
-          <div className={styles.heroScene}>
-            <Image
-              src="/images/bin-hero-scene.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 760px) 70vw, 58vw"
-              style={{ objectFit: "cover", objectPosition: "right center" }}
-              priority
-            />
-          </div>
-
-          <div className={styles.heroWater} />
+          <Image
+            src="/images/bin-hero-scene.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "center 40%" }}
+            priority
+          />
+          <div className={styles.heroHaze} />
         </div>
 
         <div className={`container ${styles.heroInner}`}>

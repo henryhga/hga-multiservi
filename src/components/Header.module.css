@@ -27,13 +27,29 @@
 }
 
 .navLink {
+  position: relative;
   display: inline-block;
   padding: 9px 14px;
+  margin-bottom: 2px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
   transition: background 0.15s ease, color 0.15s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-primary);
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .navLink:hover {
@@ -43,7 +59,11 @@
 
 .navLink[data-active="true"] {
   color: var(--color-white);
-  background: rgba(37, 130, 245, 0.22);
+}
+
+.navLink[data-active="true"]::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .right {
@@ -55,15 +75,27 @@
 .phone {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 9px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-primary-light);
   white-space: nowrap;
 }
 
+.phoneIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
 .phone:hover {
-  color: var(--color-primary-light);
+  color: var(--color-white);
 }
 
 .burger {
@@ -110,7 +142,7 @@
   .nav {
     display: none;
   }
-  .phone span {
+  .phone span:last-child {
     display: none;
   }
   .burger {
